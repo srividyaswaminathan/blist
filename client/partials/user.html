@@ -1,0 +1,25 @@
+Bucket List
+<a href="#/dashboard">Home</a>
+<a href="#/logout">Logout</a>
+<br/>
+
+<h1>{{user.name}}'s Bucket List</h1>
+
+<br/><br/>
+Done
+<br/>
+<div ng-repeat="item in doneItems">
+<p>
+<input type="checkbox" disabled ng-model="item.done"> {{item._taggedUser.name}} | {{item.title}} - {{item.description}} - {{item.createdAt | date: 'MMM dd, yyyy'}} </li>
+</p>
+</div>
+
+
+<br/><br/>
+Pending
+<br/>
+<div ng-repeat="item in pendingItems">
+<p>
+<input type="checkbox" disabled 	> {{item._taggedUser.name}} | {{item.title}} - {{item.description}} - {{item.createdAt | date: 'MMM dd, yyyy'}} </li>
+</p>
+</div>
